@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;    
+    font-family: "Poppins", sans-serif;
+}
+
+.main_box{
+    background: url("photo.jpg");
+    height: 100vh; /* The main box was having only the height which was equal to the amount of content writte inside that so I tried setting height 100% but it didn't worked so I used height: 100vh;*/
+    background-size: cover; /* Whole image of the camera wasn't covering the page so I used this property to do te following */
+}
+.btn_one i{
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    left: 16px;
+    line-height: 60px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+.sidebar_menu{
+    position: fixed;
+     left: -300px; /*Important for the aniamtion we are wanting in sliding the sidebar menu */
+    height: 100vh;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+    transition: all 0.3s linear;
+}
+.sidebar_menu .logo{
+    position: absolute;
+    width: 100%; /*Earlier it was taking the width equal to the equal the content but on setting its widht 100% it will take the whole width equal to the box */
+    line-height: 60px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
+    height: 60px;
+}
+.sidebar_menu .logo a{
+    position: absolute;
+    left: 50px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+}
+.sidebar_menu .btn_two i{
+    color: grey;
+    font-size: 30px;
+    line-height: 60px;
+    position: absolute;
+    left: 225px;
+    cursor: pointer;
+     opacity: 0;/* We are setting its opacity to 0 for making it invisible for the time being */
+     transition: all 0.3s linear;
+}
+
+.sidebar_menu .menu{
+    position: absolute;
+    width: 100%;
+    top: 80px;
+}
+
+.sidebar_menu .menu li{
+    margin-top: 2px;
+    padding: 14px 10px;
+   
+}
+
+.sidebar_menu .menu i,a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+.sidebar_menu .menu i{
+    padding-right: 5px;
+}
+
+.sidebar_menu .social_media{
+    color: white;
+    opacity: 0.5;
+    position: absolute; /* When we use absolute the element takes the position relative to the parent but if we use fixed then the element takes the position with respect to the whole screen */
+    left: 25%;
+    bottom: 2px;
+}
+#check{
+    display: none;
+}
+.sidebar_menu .menu li:hover{
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+}
+.btn_one i:hover{
+    font-size: 40px;
+}
+.btn_two i:hover{
+    font-size: 35px;
+}
+.sidebar_menu .social_media i:hover{
+    opacity: 1;
+    transform: scale(1.2);
+}
+#check:checked ~ .sidebar_menu{ 
+    left: 0;
+}
+#check:checked ~ .btn_one i{ /*Whenever we are checking the checkbox then still the hamburger menu is visible, so to hide the hamburger icon when the box is checked we have set its opacity as 0 */
+    opacity: 0;
+}
+#check:checked ~ .sidebar_menu .btn_two i{
+    opacity: 1;
+}

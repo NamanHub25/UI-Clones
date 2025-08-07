@@ -1,0 +1,88 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+.navbar{
+    background-color:antiquewhite;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar .title{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Lobster Two", sans-serif;
+    padding: 4rem 4rem;
+}
+.navbar .contents{
+    display: flex;
+    gap: 0.5rem;
+}
+.navbar .contents a{
+    text-decoration: none;
+    color: black;
+     padding: 1rem 1rem;
+     font-weight: 530;
+}
+.navbar .contents .button1{
+    background-color: black;
+    color: white;
+   border: 2px solid black;
+   border-radius: 20px;
+   padding: 7px 7px 7px 7px;
+   align-self: center;
+   margin-top: 1px;
+}
+.navbar .contents .button1:hover{
+    cursor: pointer;
+}
+.endline{
+    width: 100%;
+    height: 1.5px;
+    background-color: black;
+}
+.main-body{
+    background-image: url(./images/image.jpg);
+    height: fit-content;
+    background-size: cover;
+}
+.main-body .text-div h1{
+    font-size: 7rem;
+    margin-left: 2rem;
+
+}
+.main-body .text-div p{
+    font-size: 1.5rem;
+    font-weight: 650;
+    margin-top: 2rem;
+      margin-left: 2rem;
+}
+.main-body .buttondiv .button2{
+   background-color: black;
+   color: white;
+   border: 2px solid black;
+   border-radius: 20px;
+   padding: 7px 19px 7px 10px;
+   align-self: center;
+   margin-top: 3rem;
+   margin-left: 2rem;
+   margin-bottom: 1rem;
+}
+.footerdiv{
+    width: 100%;
+    height: 105px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    background-color:antiquewhite;
+}
+
+.footerdiv a{
+    text-decoration: none;
+    color: black;
+}
